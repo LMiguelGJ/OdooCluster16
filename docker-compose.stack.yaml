@@ -1,0 +1,94 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_USER: ${DB_USER}
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "5432:5432"
+    volumes:
+      - DB_VOLUME:/var/lib/postgresql/data/pgdata
+    networks:
+      agent_network:
+        aliases:
+          - ${DB_HOST}
+      traefik_public:
+        aliases:
+          - ${DB_HOST}
+
+  odoo:
+    image: odoo:16.0-20250311
+    depends_on:
+      - db
+    environment:
+      DB_HOST: ${DB_HOST}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      EXPIRATION_DATE: ${EXPIRATION_DATE}
+      ENTERPRISE_CODE: ${ENTERPRISE_CODE}
+      ADDONS_PATH: ${ADDONS_PATH}
+      DATA_DIR: ${DATA_DIR}
+      ADMIN_PASSWD: ${ADMIN_PASSWD}
+      DB_MAXCONN: ${DB_MAXCONN}
+      DB_SSLMODE: ${DB_SSLMODE}
+      HTTP_ENABLE: ${HTTP_ENABLE}
+      LIMIT_MEMORY_HARD: ${LIMIT_MEMORY_HARD}
+      LIMIT_MEMORY_SOFT: ${LIMIT_MEMORY_SOFT}
+      LIMIT_TIME_CPU: ${LIMIT_TIME_CPU}
+      LIMIT_TIME_REAL: ${LIMIT_TIME_REAL}
+      LOG_LEVEL: ${LOG_LEVEL}
+      PROXY_MODE: ${PROXY_MODE}
+      SERVER_WIDE_MODULES: ${SERVER_WIDE_MODULES}
+    volumes:
+      - ODOO_VOLUME_NAME:/var/lib/odoo
+      - ODOO_CONFIG_VOLUME_NAME:/etc/odoo
+      - ODOO_ADDONS_VOLUME_NAME:/mnt/extra-addons
+      - ODOO_ENTERPRISE_ADDONS_VOLUME_NAME:/mnt/enterprise-addons
+      - INIT_SCRIPT_VOLUME:/init-script
+      - INIT_DB_SQL_VOLUME:/init-db
+    user: root
+    entrypoint: ["/bin/sh", "-c", "cp /init-script/init-script.sh /init-script.sh && cp /init-db/init-db.sql /init-db.sql && chmod +x /init-script.sh && /init-script.sh"]
+    networks:
+      - agent_network
+      - traefik_public
+    deploy:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.odoo.rule=Host(`${WEB_HOST}`)"
+        - "traefik.http.routers.odoo.entrypoints=websecure"
+        - "traefik.http.routers.odoo.tls.certresolver=le"
+        - "traefik.http.services.odoo.loadbalancer.server.port=${WEB_PORT}"
+
+networks:
+  traefik_public:
+    external: true
+    attachable: true
+  agent_network:
+    external: true
+
+volumes:
+  DB_VOLUME:
+    external: true
+    name: DB_VOLUME_${CLIENT_NAME}
+  ODOO_VOLUME_NAME:
+    external: true
+    name: ODOO_VOLUME_${CLIENT_NAME}
+  ODOO_CONFIG_VOLUME_NAME:
+    external: true
+    name: ODOO_CONFIG_VOLUME_${CLIENT_NAME}
+  ODOO_ADDONS_VOLUME_NAME:
+    external: true
+    name: ODOO_ADDONS_VOLUME_${CLIENT_NAME}
+  ODOO_ENTERPRISE_ADDONS_VOLUME_NAME:
+    external: true
+    name: ODOO_ENTERPRISE_ADDONS_VOLUME_${CLIENT_NAME}
+  INIT_SCRIPT_VOLUME:
+    external: true
+    name: INIT_SCRIPT_VOLUME_${CLIENT_NAME}
+  INIT_DB_SQL_VOLUME:
+    external: true
+    name: INIT_DB_SQL_VOLUME_${CLIENT_NAME}
