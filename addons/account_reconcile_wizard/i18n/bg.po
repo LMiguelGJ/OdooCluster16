@@ -1,0 +1,379 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_reconcile_wizard
+# 
+# Translators:
+# Milena Georgieva, 2025
+# Rumena Georgieva <rumena.georgieva@gmail.com>, 2025
+# Rosen Vladimirov <vladimirov.rosen@gmail.com>, 2025
+# Elena Varbanova, 2025
+# KeyVillage, 2025
+# Margarita Katzeva, 2025
+# Petko Karamotchev, 2025
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-10 08:58+0000\n"
+"PO-Revision-Date: 2025-02-12 16:03+0000\n"
+"Last-Translator: Petko Karamotchev, 2025\n"
+"Language-Team: Bulgarian (https://app.transifex.com/odoo/teams/41243/bg/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: bg\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__account_id
+msgid "Account"
+msgstr "Сметка"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/account_move_line.py:0
+#, python-format
+msgid ""
+"Account %s does not allow reconciliation. First change the configuration of "
+"this account to allow it."
+msgstr ""
+"Акаунт %s не позволява съгласуване. Първо променете конфигурацията на този "
+"акаунт, за да го разрешите."
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__transfer_from_account_id
+msgid "Account Transfer From"
+msgstr ""
+
+#. module: account_reconcile_wizard
+#: model:ir.model,name:account_reconcile_wizard.model_account_reconcile_wizard
+msgid "Account reconciliation wizard"
+msgstr ""
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__reco_model_autocomplete_ids
+msgid "All reconciliation models"
+msgstr ""
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__allow_partials
+msgid "Allow partials"
+msgstr ""
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__amount_currency
+msgid "Amount"
+msgstr "Сума"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__amount
+msgid "Amount in company currency"
+msgstr "Сума във фирмена валута"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/wizard/account_reconcile_wizard.py:0
+#, python-format
+msgid ""
+"An entry will transfer %(amount)s from %(from_account)s to %(to_account)s."
+msgstr ""
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,help:account_reconcile_wizard.field_account_reconcile_wizard__to_check
+msgid ""
+"Check if you are not certain of all the information of the counterpart."
+msgstr "Провеврка ако няма сигурност за цялата информация на контрагента."
+
+#. module: account_reconcile_wizard
+#: model:ir.model,name:account_reconcile_wizard.model_res_company
+msgid "Companies"
+msgstr "Фирми"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__company_id
+msgid "Company"
+msgstr "Фирма"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__company_currency_id
+msgid "Company currency"
+msgstr "Фирмена валута"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__create_uid
+msgid "Created by"
+msgstr "Създаден от"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__create_date
+msgid "Created on"
+msgstr "Създадено на"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/account_move_line.py:0
+#: code:addons/account_reconcile_wizard/models/account_move_line.py:0
+#, python-format
+msgid "Currency exchange rate difference"
+msgstr "Currency exchange rate difference"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__reco_currency_id
+msgid "Currency to use for reconciliation"
+msgstr " Валута, която да се използва за съгласуване"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__date
+msgid "Date"
+msgstr "Дата"
+
+#. module: account_reconcile_wizard
+#: model_terms:ir.ui.view,arch_db:account_reconcile_wizard.view_account_reconcile_wizard
+msgid "Discard"
+msgstr "Отхвърлете"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__display_allow_partials
+msgid "Display Allow Partials"
+msgstr ""
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__display_name
+msgid "Display Name"
+msgstr "Име за показване"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/account_move_line.py:0
+#, python-format
+msgid "Entries are not from the same account: %s"
+msgstr "Записите не са от същата сметка: %s"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/account_move_line.py:0
+#, python-format
+msgid "Entries don't belong to the same company: %s"
+msgstr "Записите не принадлежат на същата компания.: %s"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__force_partials
+msgid "Force Partials"
+msgstr ""
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__is_write_off_required
+msgid "Is a write-off move required to reconcile"
+msgstr ""
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__is_transfer_required
+msgid "Is an account transfer required"
+msgstr ""
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__transfer_warning_message
+msgid "Is an account transfer required to reconcile"
+msgstr ""
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__lock_date_violated_warning_message
+msgid "Is the date violating the lock date of moves"
+msgstr ""
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__journal_id
+msgid "Journal"
+msgstr "Дневник"
+
+#. module: account_reconcile_wizard
+#: model:ir.model,name:account_reconcile_wizard.model_account_move_line
+msgid "Journal Item"
+msgstr "Счетоводна операция"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__label
+msgid "Label"
+msgstr "Етикет"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard____last_update
+msgid "Last Modified on"
+msgstr "Последна промяна на"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Последно актуализирано от"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__write_date
+msgid "Last Updated on"
+msgstr "Последно актуализирано на"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__move_line_ids
+msgid "Move lines to reconcile"
+msgstr ""
+
+#. module: account_reconcile_wizard
+#: model_terms:ir.ui.view,arch_db:account_reconcile_wizard.view_account_reconcile_wizard
+msgid ""
+"Only partial reconciliation is possible. Proceed in multiple steps if you "
+"want to full reconcile."
+msgstr ""
+
+#. module: account_reconcile_wizard
+#: model_terms:ir.ui.view,arch_db:account_reconcile_wizard.view_account_reconcile_wizard
+msgid "Reconcile"
+msgstr "Равнете"
+
+#. module: account_reconcile_wizard
+#: model_terms:ir.ui.view,arch_db:account_reconcile_wizard.view_account_reconcile_wizard
+msgid "Reconcile & open"
+msgstr ""
+
+#. module: account_reconcile_wizard
+#: model:ir.actions.server,name:account_reconcile_wizard.action_backport_reconcile_wizard
+msgid "Reconcile (wizard)"
+msgstr ""
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__reco_account_id
+msgid "Reconcile Account"
+msgstr ""
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__reco_model_id
+msgid "Reconciliation model"
+msgstr ""
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__single_currency_mode
+msgid "Single Currency Mode"
+msgstr ""
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__tax_id
+msgid "Tax"
+msgstr "Данък"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/wizard/account_reconcile_wizard.py:0
+#, python-format
+msgid ""
+"The date you set violates the lock date of one of your entry. It will be "
+"overriden by the following date : %(replacement_date)s"
+msgstr ""
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/wizard/account_reconcile_wizard.py:0
+#, python-format
+msgid "This can only be used on journal items"
+msgstr "Това може да се използва само за счетоводни записи"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__to_check
+msgid "To Check"
+msgstr "За Проверка"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/wizard/account_reconcile_wizard.py:0
+#, python-format
+msgid "Transfer from %s"
+msgstr "Прехвърляне от %s"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/wizard/account_reconcile_wizard.py:0
+#, python-format
+msgid "Transfer to %s"
+msgstr "Прехвърляне към %s"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/wizard/account_reconcile_wizard.py:0
+#, python-format
+msgid "Write-Off"
+msgstr "Отписване"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/wizard/account_reconcile_wizard.py:0
+#, python-format
+msgid "Write-Off Entry"
+msgstr ""
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/account_move_line.py:0
+#, python-format
+msgid "You are trying to reconcile some entries that are already reconciled."
+msgstr ""
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/wizard/account_reconcile_wizard.py:0
+#, python-format
+msgid "You can only reconcile entries with up to two different accounts: %s"
+msgstr ""
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/account_move_line.py:0
+#, python-format
+msgid "You can only reconcile posted entries."
+msgstr ""
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/account_move_line.py:0
+#, python-format
+msgid ""
+"You have to configure the 'Exchange Gain or Loss Journal' in your company "
+"settings, to manage automatically the booking of accounting entries related "
+"to differences between exchange rates."
+msgstr ""
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/account_move_line.py:0
+#, python-format
+msgid ""
+"You should configure the 'Gain Exchange Rate Account' in your company "
+"settings, to manage automatically the booking of accounting entries related "
+"to differences between exchange rates."
+msgstr ""
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/account_move_line.py:0
+#, python-format
+msgid ""
+"You should configure the 'Loss Exchange Rate Account' in your company "
+"settings, to manage automatically the booking of accounting entries related "
+"to differences between exchange rates."
+msgstr ""
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/company.py:0
+#, python-format
+msgid "tax"
+msgstr ""
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/company.py:0
+#, python-format
+msgid "user"
+msgstr "потребител"

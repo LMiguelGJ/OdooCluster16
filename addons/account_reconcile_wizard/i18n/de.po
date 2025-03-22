@@ -1,0 +1,392 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_reconcile_wizard
+# 
+# Translators:
+# Wil Odoo, 2025
+# Larissa Manderfeld, 2025
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-10 08:58+0000\n"
+"PO-Revision-Date: 2025-02-12 16:03+0000\n"
+"Last-Translator: Larissa Manderfeld, 2025\n"
+"Language-Team: German (https://app.transifex.com/odoo/teams/41243/de/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__account_id
+msgid "Account"
+msgstr "Konto"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/account_move_line.py:0
+#, python-format
+msgid ""
+"Account %s does not allow reconciliation. First change the configuration of "
+"this account to allow it."
+msgstr ""
+"Das Konto %s erlaubt keine Abstimmung. Ändern Sie zunächst die Konfiguration"
+" dieses Kontos, um dies zuzulassen."
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__transfer_from_account_id
+msgid "Account Transfer From"
+msgstr "Kontenübertragsformular"
+
+#. module: account_reconcile_wizard
+#: model:ir.model,name:account_reconcile_wizard.model_account_reconcile_wizard
+msgid "Account reconciliation wizard"
+msgstr "Kontoabstimmungsassistent"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__reco_model_autocomplete_ids
+msgid "All reconciliation models"
+msgstr "Alle Abstimmungsmodelle"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__allow_partials
+msgid "Allow partials"
+msgstr "Teilabstimmung erlauben"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__amount_currency
+msgid "Amount"
+msgstr "Betrag"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__amount
+msgid "Amount in company currency"
+msgstr "Betrag in Unternehmenswährung"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/wizard/account_reconcile_wizard.py:0
+#, python-format
+msgid ""
+"An entry will transfer %(amount)s from %(from_account)s to %(to_account)s."
+msgstr ""
+"Eine Buchung wird %(amount)s von %(from_account)s nach %(to_account)s "
+"übertragen."
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,help:account_reconcile_wizard.field_account_reconcile_wizard__to_check
+msgid ""
+"Check if you are not certain of all the information of the counterpart."
+msgstr ""
+"Ankreuzen, wenn Sie nicht alle Informationen des Gegenstücks sicher kennen."
+
+#. module: account_reconcile_wizard
+#: model:ir.model,name:account_reconcile_wizard.model_res_company
+msgid "Companies"
+msgstr "Unternehmen"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__company_id
+msgid "Company"
+msgstr "Unternehmen"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__company_currency_id
+msgid "Company currency"
+msgstr "Unternehmenswährung"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__create_uid
+msgid "Created by"
+msgstr "Erstellt von"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__create_date
+msgid "Created on"
+msgstr "Erstellt am"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/account_move_line.py:0
+#: code:addons/account_reconcile_wizard/models/account_move_line.py:0
+#, python-format
+msgid "Currency exchange rate difference"
+msgstr "Wechselkursdifferenz"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__reco_currency_id
+msgid "Currency to use for reconciliation"
+msgstr "Für Abstimmung verwendete Währung"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__date
+msgid "Date"
+msgstr "Datum"
+
+#. module: account_reconcile_wizard
+#: model_terms:ir.ui.view,arch_db:account_reconcile_wizard.view_account_reconcile_wizard
+msgid "Discard"
+msgstr "Verwerfen"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__display_allow_partials
+msgid "Display Allow Partials"
+msgstr "„Teilabstimmung erlauben“ anzeigen"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__display_name
+msgid "Display Name"
+msgstr "Anzeigename"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/account_move_line.py:0
+#, python-format
+msgid "Entries are not from the same account: %s"
+msgstr "Buchungen stammen nicht von demselben Konto: %s"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/account_move_line.py:0
+#, python-format
+msgid "Entries don't belong to the same company: %s"
+msgstr "Buchungen gehören nicht zum selben Unternehmen: %s"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__force_partials
+msgid "Force Partials"
+msgstr "Teilabstimmung erzwingen"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__is_write_off_required
+msgid "Is a write-off move required to reconcile"
+msgstr "Ist eine Ausbuchung zur Abstimmung erforderlich"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__is_transfer_required
+msgid "Is an account transfer required"
+msgstr "Ist eine Kontoübertragung erforderlich"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__transfer_warning_message
+msgid "Is an account transfer required to reconcile"
+msgstr "Ist eine Kontoübertragung zur Abstimmung erforderlich"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__lock_date_violated_warning_message
+msgid "Is the date violating the lock date of moves"
+msgstr "Verstößt das Datum gegen das Sperrdatum von Buchungen"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__journal_id
+msgid "Journal"
+msgstr "Journal"
+
+#. module: account_reconcile_wizard
+#: model:ir.model,name:account_reconcile_wizard.model_account_move_line
+msgid "Journal Item"
+msgstr "Buchungszeile"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__label
+msgid "Label"
+msgstr "Bezeichnung"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard____last_update
+msgid "Last Modified on"
+msgstr "Zuletzt geändert am"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Zuletzt aktualisiert von"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__write_date
+msgid "Last Updated on"
+msgstr "Zuletzt aktualisiert am"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__move_line_ids
+msgid "Move lines to reconcile"
+msgstr "Abzustimmende Buchungszeilen"
+
+#. module: account_reconcile_wizard
+#: model_terms:ir.ui.view,arch_db:account_reconcile_wizard.view_account_reconcile_wizard
+msgid ""
+"Only partial reconciliation is possible. Proceed in multiple steps if you "
+"want to full reconcile."
+msgstr ""
+"Nur Teilabstimmung ist möglich. Gehen Sie in mehreren Schritten vor, wenn "
+"Sie eine vollständige Abstimmung vornehmen möchten."
+
+#. module: account_reconcile_wizard
+#: model_terms:ir.ui.view,arch_db:account_reconcile_wizard.view_account_reconcile_wizard
+msgid "Reconcile"
+msgstr "Abstimmen"
+
+#. module: account_reconcile_wizard
+#: model_terms:ir.ui.view,arch_db:account_reconcile_wizard.view_account_reconcile_wizard
+msgid "Reconcile & open"
+msgstr "Abstimmen & öffnen"
+
+#. module: account_reconcile_wizard
+#: model:ir.actions.server,name:account_reconcile_wizard.action_backport_reconcile_wizard
+msgid "Reconcile (wizard)"
+msgstr "Abstimmen (Assistent)"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__reco_account_id
+msgid "Reconcile Account"
+msgstr "Konto abstimmen"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__reco_model_id
+msgid "Reconciliation model"
+msgstr "Abstimmungsmodell"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__single_currency_mode
+msgid "Single Currency Mode"
+msgstr "Modus mit einer Währung"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__tax_id
+msgid "Tax"
+msgstr "Steuer"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/wizard/account_reconcile_wizard.py:0
+#, python-format
+msgid ""
+"The date you set violates the lock date of one of your entry. It will be "
+"overriden by the following date : %(replacement_date)s"
+msgstr ""
+"Das von Ihnen festgelegte Datum verstößt gegen das Sperrdatum einer Ihrer "
+"Buchungen. Es wird durch das folgende Datum überschrieben: "
+"%(replacement_date)s"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/wizard/account_reconcile_wizard.py:0
+#, python-format
+msgid "This can only be used on journal items"
+msgstr "Dies kann nur für Buchungszeilen verwendet werden"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__to_check
+msgid "To Check"
+msgstr "Zu prüfen"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/wizard/account_reconcile_wizard.py:0
+#, python-format
+msgid "Transfer from %s"
+msgstr "Übertragung von %s"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/wizard/account_reconcile_wizard.py:0
+#, python-format
+msgid "Transfer to %s"
+msgstr "Übertragung nach %s"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/wizard/account_reconcile_wizard.py:0
+#, python-format
+msgid "Write-Off"
+msgstr "Ausbuchung"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/wizard/account_reconcile_wizard.py:0
+#, python-format
+msgid "Write-Off Entry"
+msgstr "Ausbuchungsposten"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/account_move_line.py:0
+#, python-format
+msgid "You are trying to reconcile some entries that are already reconciled."
+msgstr "Sie versuchen, einige bereits abgestimmte Buchungen abzustimmen."
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/wizard/account_reconcile_wizard.py:0
+#, python-format
+msgid "You can only reconcile entries with up to two different accounts: %s"
+msgstr ""
+"Sie können nur Einträge mit bis zu zwei verschiedenen Konten abstimmen: %s"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/account_move_line.py:0
+#, python-format
+msgid "You can only reconcile posted entries."
+msgstr "Sie können nur gebuchte Posten abstimmen."
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/account_move_line.py:0
+#, python-format
+msgid ""
+"You have to configure the 'Exchange Gain or Loss Journal' in your company "
+"settings, to manage automatically the booking of accounting entries related "
+"to differences between exchange rates."
+msgstr ""
+"Sie müssen das „Journal für Wechselkursgewinne/-verluste“ in Ihren "
+"Unternehmenseinstellungen konfigurieren, um die automatische Buchung von "
+"Buchungsposten im Zusammenhang mit Wechselkursdifferenzen zu verwalten."
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/account_move_line.py:0
+#, python-format
+msgid ""
+"You should configure the 'Gain Exchange Rate Account' in your company "
+"settings, to manage automatically the booking of accounting entries related "
+"to differences between exchange rates."
+msgstr ""
+"Sie sollten in den Einstellungen Ihres Unternehmens das „Konto für "
+"Wechselkursgewinne“ konfigurieren, um die automatische Buchung von Posten im"
+" Zusammenhang mit Wechselkursdifferenzen zu verwalten."
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/account_move_line.py:0
+#, python-format
+msgid ""
+"You should configure the 'Loss Exchange Rate Account' in your company "
+"settings, to manage automatically the booking of accounting entries related "
+"to differences between exchange rates."
+msgstr ""
+"Sie sollten in den Einstellungen Ihres Unternehmens das „Konto für "
+"Wechselkursverluste“ konfigurieren, um die automatische Buchung von Posten "
+"im Zusammenhang mit Wechselkursdifferenzen zu verwalten."
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/company.py:0
+#, python-format
+msgid "tax"
+msgstr "Steuer"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/company.py:0
+#, python-format
+msgid "user"
+msgstr "Benutzer"

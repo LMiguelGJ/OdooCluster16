@@ -1,0 +1,397 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_reconcile_wizard
+# 
+# Translators:
+# Martin Trigaux, 2025
+# Leaanika Randmets, 2025
+# Eneli Õigus <enelioigus@gmail.com>, 2025
+# Egon Raamat <egon@avalah.ee>, 2025
+# Terttu Tammaru, 2025
+# Siim Raasuke, 2025
+# Triine Aavik <triine@avalah.ee>, 2025
+# Birgit Vijar, 2025
+# Anna, 2025
+# Stevin Lilla, 2025
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-10 08:58+0000\n"
+"PO-Revision-Date: 2025-02-12 16:03+0000\n"
+"Last-Translator: Stevin Lilla, 2025\n"
+"Language-Team: Estonian (https://app.transifex.com/odoo/teams/41243/et/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: et\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__account_id
+msgid "Account"
+msgstr "Konto"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/account_move_line.py:0
+#, python-format
+msgid ""
+"Account %s does not allow reconciliation. First change the configuration of "
+"this account to allow it."
+msgstr ""
+"Konto%s ei võimalda sobitamist. Muuda esmalt selle konto seadistus, et seda "
+"võimaldada."
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__transfer_from_account_id
+msgid "Account Transfer From"
+msgstr "Konto ülekanne"
+
+#. module: account_reconcile_wizard
+#: model:ir.model,name:account_reconcile_wizard.model_account_reconcile_wizard
+msgid "Account reconciliation wizard"
+msgstr "konto sobitamise viisard"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__reco_model_autocomplete_ids
+msgid "All reconciliation models"
+msgstr "Kõik sobitamise mudelid"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__allow_partials
+msgid "Allow partials"
+msgstr "Luba osaliselt"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__amount_currency
+msgid "Amount"
+msgstr "Summa"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__amount
+msgid "Amount in company currency"
+msgstr "Summa ettevõtte määratud valuutas"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/wizard/account_reconcile_wizard.py:0
+#, python-format
+msgid ""
+"An entry will transfer %(amount)s from %(from_account)s to %(to_account)s."
+msgstr ""
+"Kandega viiakse %(amount)s üle siit kontolt %(from_account)s siia "
+"kontole%(to_account)s."
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,help:account_reconcile_wizard.field_account_reconcile_wizard__to_check
+msgid ""
+"Check if you are not certain of all the information of the counterpart."
+msgstr "Kontrolli, kui ei ole kindel vastaspoole andmetes."
+
+#. module: account_reconcile_wizard
+#: model:ir.model,name:account_reconcile_wizard.model_res_company
+msgid "Companies"
+msgstr "Ettevõtted"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__company_id
+msgid "Company"
+msgstr "Ettevõte"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__company_currency_id
+msgid "Company currency"
+msgstr "Ettevõtte valuuta"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__create_uid
+msgid "Created by"
+msgstr "Loodud (kelle poolt?)"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__create_date
+msgid "Created on"
+msgstr "Loodud"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/account_move_line.py:0
+#: code:addons/account_reconcile_wizard/models/account_move_line.py:0
+#, python-format
+msgid "Currency exchange rate difference"
+msgstr "Valuutakursi erinevus"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__reco_currency_id
+msgid "Currency to use for reconciliation"
+msgstr "sobitamisel kasutatav valuuta"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__date
+msgid "Date"
+msgstr "Kuupäev"
+
+#. module: account_reconcile_wizard
+#: model_terms:ir.ui.view,arch_db:account_reconcile_wizard.view_account_reconcile_wizard
+msgid "Discard"
+msgstr "Loobu"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__display_allow_partials
+msgid "Display Allow Partials"
+msgstr "Kuva lubatud osalised"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__display_name
+msgid "Display Name"
+msgstr "Kuvatav nimi"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/account_move_line.py:0
+#, python-format
+msgid "Entries are not from the same account: %s"
+msgstr "Kanded ei ole samalt kontolt: %s"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/account_move_line.py:0
+#, python-format
+msgid "Entries don't belong to the same company: %s"
+msgstr "Kanded ei kuulu samale ettevõttele: %s"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__force_partials
+msgid "Force Partials"
+msgstr "Sunni osalisi"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__is_write_off_required
+msgid "Is a write-off move required to reconcile"
+msgstr "Sobitamiseks on vaja teha mahakandmine"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__is_transfer_required
+msgid "Is an account transfer required"
+msgstr "konto ülekanne on kohustuslik"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__transfer_warning_message
+msgid "Is an account transfer required to reconcile"
+msgstr "konto ülekanne on kohustuslik sobitamiseks"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__lock_date_violated_warning_message
+msgid "Is the date violating the lock date of moves"
+msgstr "kuupäev rikub lukustuskuupäeva"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__journal_id
+msgid "Journal"
+msgstr "Andmik"
+
+#. module: account_reconcile_wizard
+#: model:ir.model,name:account_reconcile_wizard.model_account_move_line
+msgid "Journal Item"
+msgstr "Andmiku kanderida"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__label
+msgid "Label"
+msgstr "Kirjeldus"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard____last_update
+msgid "Last Modified on"
+msgstr "Viimati muudetud"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Viimati uuendatud"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__write_date
+msgid "Last Updated on"
+msgstr "Viimati uuendatud"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__move_line_ids
+msgid "Move lines to reconcile"
+msgstr "Kanderead sobitamiseks "
+
+#. module: account_reconcile_wizard
+#: model_terms:ir.ui.view,arch_db:account_reconcile_wizard.view_account_reconcile_wizard
+msgid ""
+"Only partial reconciliation is possible. Proceed in multiple steps if you "
+"want to full reconcile."
+msgstr ""
+"Osaline sobitamine on võimalik. Kui soovite täielikult sobitada, jätkake "
+"mitmes etapis."
+
+#. module: account_reconcile_wizard
+#: model_terms:ir.ui.view,arch_db:account_reconcile_wizard.view_account_reconcile_wizard
+msgid "Reconcile"
+msgstr "Sobita"
+
+#. module: account_reconcile_wizard
+#: model_terms:ir.ui.view,arch_db:account_reconcile_wizard.view_account_reconcile_wizard
+msgid "Reconcile & open"
+msgstr "Sobita & ava"
+
+#. module: account_reconcile_wizard
+#: model:ir.actions.server,name:account_reconcile_wizard.action_backport_reconcile_wizard
+msgid "Reconcile (wizard)"
+msgstr ""
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__reco_account_id
+msgid "Reconcile Account"
+msgstr "Konto sobitamine"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__reco_model_id
+msgid "Reconciliation model"
+msgstr "Sobitamismudel"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__single_currency_mode
+msgid "Single Currency Mode"
+msgstr "Ühe valuuta režiim"
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__tax_id
+msgid "Tax"
+msgstr "Maks"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/wizard/account_reconcile_wizard.py:0
+#, python-format
+msgid ""
+"The date you set violates the lock date of one of your entry. It will be "
+"overriden by the following date : %(replacement_date)s"
+msgstr ""
+"Kuupäev, mille määrasite, on enne lukustuskuupäeva. See asendatakse järgmise"
+" kuupäevaga: %(replacement_date)s"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/wizard/account_reconcile_wizard.py:0
+#, python-format
+msgid "This can only be used on journal items"
+msgstr "Seda saab kasutada ainult andmike kanderidades."
+
+#. module: account_reconcile_wizard
+#: model:ir.model.fields,field_description:account_reconcile_wizard.field_account_reconcile_wizard__to_check
+msgid "To Check"
+msgstr "Kontrolli üle"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/wizard/account_reconcile_wizard.py:0
+#, python-format
+msgid "Transfer from %s"
+msgstr "Ülekanne alates %s"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/wizard/account_reconcile_wizard.py:0
+#, python-format
+msgid "Transfer to %s"
+msgstr "Ülekanne kuni %s"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/wizard/account_reconcile_wizard.py:0
+#, python-format
+msgid "Write-Off"
+msgstr "Mahakandmine"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/wizard/account_reconcile_wizard.py:0
+#, python-format
+msgid "Write-Off Entry"
+msgstr "Mahakandmise kanne"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/account_move_line.py:0
+#, python-format
+msgid "You are trying to reconcile some entries that are already reconciled."
+msgstr ""
+"Sa saad märkida selle kasti, et märgistada andmiku kanderea kui õigustüli "
+"seotud partneriga"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/wizard/account_reconcile_wizard.py:0
+#, python-format
+msgid "You can only reconcile entries with up to two different accounts: %s"
+msgstr "Kandeid saab sobitada kuni kahe errineva kontoga: %s"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/account_move_line.py:0
+#, python-format
+msgid "You can only reconcile posted entries."
+msgstr "Teil on võimalik ainult postitatud kirjeid sobitada."
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/account_move_line.py:0
+#, python-format
+msgid ""
+"You have to configure the 'Exchange Gain or Loss Journal' in your company "
+"settings, to manage automatically the booking of accounting entries related "
+"to differences between exchange rates."
+msgstr ""
+"'Valuutakursi kasumi või kahjumi andmik' tuleb ettevõtte seadistuste alt "
+"seadistada, et raamatupidamises tekiksid automaatsed valuutakursi erinevuse "
+"kanded. "
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/account_move_line.py:0
+#, python-format
+msgid ""
+"You should configure the 'Gain Exchange Rate Account' in your company "
+"settings, to manage automatically the booking of accounting entries related "
+"to differences between exchange rates."
+msgstr ""
+"Peate seadistama `Valuutakursi Kasumi konto` seadete all, et automaatselt "
+"kajastada valuutakursi muutusi"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/account_move_line.py:0
+#, python-format
+msgid ""
+"You should configure the 'Loss Exchange Rate Account' in your company "
+"settings, to manage automatically the booking of accounting entries related "
+"to differences between exchange rates."
+msgstr ""
+"Peate seadistama `Valuutakursi Kahjumi konto` seadete all, et automaatselt "
+"kajastada valuutakursi muutusi"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/company.py:0
+#, python-format
+msgid "tax"
+msgstr "maks"
+
+#. module: account_reconcile_wizard
+#. odoo-python
+#: code:addons/account_reconcile_wizard/models/company.py:0
+#, python-format
+msgid "user"
+msgstr "kasutaja"

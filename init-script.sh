@@ -16,14 +16,13 @@ else
     echo "Moviendo los addons a /mnt/enterprise-addons/..."
     cd Odoo-Enterprise
     mv addons/* /mnt/enterprise-addons/
-    
     echo "Limpiando el directorio clonado..."
     cd ..
     rm -rf Odoo-Enterprise
 fi
 
 # Modificar el archivo SQL antes de ejecutarlo usando awk
-echo "Modificando el archivo SQL..."
+echo "Modificando el archivo SQL.."
 awk -v exp_date="$EXPIRATION_DATE" -v ent_code="$ENTERPRISE_CODE" '
 {
   gsub(/v_expiration_date TIMESTAMP := '\''[^'\'']*'\'';/, "v_expiration_date TIMESTAMP := '\''" exp_date "'\'';");
