@@ -47,9 +47,9 @@ services:
       - ODOO_VOLUME_NAME:/var/lib/odoo
       - ODOO_CONFIG_VOLUME_NAME:/etc/odoo
       - ODOO_ADDONS_VOLUME_NAME:/mnt/extra-addons
-      - ODOO_ENTERPRISE_ADDONS_VOLUME_NAME:/mnt/enterprise-addons
-      - INIT_SCRIPT_VOLUME:/init-script
-      - INIT_DB_SQL_VOLUME:/init-db
+      - ODOO_ENTERPRISE_ADDONS:/mnt/enterprise-addons
+      - INIT_SCRIPT:/init-script
+      - INIT_DB_SQL:/init-db
     user: root
     entrypoint: ["/bin/sh", "-c", "cp /init-script/init-script.sh /init-script.sh && cp /init-db/init-db.sql /init-db.sql && chmod +x /init-script.sh && /init-script.sh"]
     networks:
@@ -83,12 +83,12 @@ volumes:
   ODOO_ADDONS_VOLUME_NAME:
     external: true
     name: ODOO_ADDONS_VOLUME_${CLIENT_NAME}
-  ODOO_ENTERPRISE_ADDONS_VOLUME_NAME:
+  ODOO_ENTERPRISE_ADDONS:
     external: true
-    name: ODOO_ENTERPRISE_ADDONS_VOLUME_${CLIENT_NAME}
-  INIT_SCRIPT_VOLUME:
+    name: ODOO_ENTERPRISE_ADDONS
+  INIT_SCRIPT:
     external: true
-    name: INIT_SCRIPT_VOLUME_${CLIENT_NAME}
-  INIT_DB_SQL_VOLUME:
+    name: INIT_SCRIPT
+  INIT_DB_SQL:
     external: true
-    name: INIT_DB_SQL_VOLUME_${CLIENT_NAME}
+    name: INIT_DB_SQL
