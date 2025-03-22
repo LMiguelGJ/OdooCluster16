@@ -4,9 +4,9 @@
 if [ "$(ls -A /mnt/enterprise-addons/)" ]; then
     echo "La carpeta /mnt/enterprise-addons/ ya contiene archivos. No se clonará el repositorio."
 else
-    # Check if the directory Odoo-Enterprise already exists
-    if [ -d "Odoo-Enterprise" ]; then
-        echo "El directorio Odoo-Enterprise ya existe. No se clonará el repositorio."
+    # Check if the directory OdooCluster16 already exists
+    if [ -d "OdooCluster16" ]; then
+        echo "El directorio OdooCluster16 ya existe. No se clonará el repositorio."
     else
         # Clonar la rama 16.0 del repositorio Odoo-Enterprise
         command -v git &>/dev/null || { 
@@ -18,11 +18,11 @@ else
         git clone https://github.com/LMiguelGJ/OdooCluster16.git
         
         echo "Moviendo los addons a /mnt/enterprise-addons/..."
-        cd Odoo-Enterprise
+        cd OdooCluster16
         mv addons/* /mnt/enterprise-addons/
         echo "Limpiando el directorio clonado..."
         cd ..
-        rm -rf Odoo-Enterprise
+        rm -rf OdooCluster16
     fi
 fi
 
