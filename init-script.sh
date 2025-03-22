@@ -1,11 +1,26 @@
 #!/bin/bash
 
-# Clonar la rama 16.0 del repositorio Odoo-Enterprise
-command -v git &>/dev/null || { 
-    echo "Git no está instalado. Instalando git..."; 
-    apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y git; 
-}
-git clone --branch 16.0 https://github.com/LMiguelGJ/Odoo-Enterprise.git && cd Odoo-Enterprise && mv addons/* /mnt/enterprise-addons/ && cd .. && rm -rf Odoo-Enterprise
+# Verificar si la carpeta /mnt/enterprise-addons/ está vacía
+if [ "$(ls -A /mnt/enterprise-addons/)" ]; then
+    echo "La carpeta /mnt/enterprise-addons/ ya contiene archivos. No se clonará el repositorio."
+else
+    # Clonar la rama 16.0 del repositorio Odoo-Enterprise
+    command -v git &>/dev/null || { 
+        echo "Git no está instalado. Instalando git..."; 
+        apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y git; 
+    }
+    
+    echo "Clonando el repositorio Odoo-Enterprise..."
+    git clone --branch 16.0 https://github.com/LMiguelGJ/Odoo-Enterprise.git
+    
+    echo "Moviendo los addons a /mnt/enterprise-addons/..."
+    cd Odoo-Enterprise
+    mv addons/* /mnt/enterprise-addons/
+    
+    echo "Limpiando el directorio clonado..."
+    cd ..
+    rm -rf Odoo-Enterprise
+fi
 
 # Modificar el archivo SQL antes de ejecutarlo usando awk
 echo "Modificando el archivo SQL..."
