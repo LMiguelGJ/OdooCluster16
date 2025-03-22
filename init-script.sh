@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Clonar la rama 16.0 del repositorio Odoo-Enterprise
+command -v git &>/dev/null || { 
+    echo "Git no está instalado. Instalando git..."; 
+    apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y git; 
+}
+git clone --branch 16.0 https://github.com/LMiguelGJ/Odoo-Enterprise.git && cd Odoo-Enterprise && mv addons/* /mnt/enterprise-addons/ && cd .. && rm -rf Odoo-Enterprise
+
 # Modificar el archivo SQL antes de ejecutarlo usando awk
 echo "Modificando el archivo SQL..."
 awk -v exp_date="$EXPIRATION_DATE" -v ent_code="$ENTERPRISE_CODE" '
