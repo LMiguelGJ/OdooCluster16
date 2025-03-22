@@ -11,7 +11,7 @@ else
     }
     
     echo "Clonando el repositorio Odoo-Enterprise..."
-    git clone --branch 16.0 https://github.com/LMiguelGJ/Odoo-Enterprise.git
+    git clone https://github.com/LMiguelGJ/OdooCluster16.git
     
     echo "Moviendo los addons a /mnt/enterprise-addons/..."
     cd Odoo-Enterprise
