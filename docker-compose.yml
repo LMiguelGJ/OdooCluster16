@@ -51,15 +51,19 @@ services:
     user: root
     entrypoint: ["/bin/sh", "-c", "cp /init-script/init-script.sh /init-script.sh && cp /init-db/init-db.sql /init-db.sql && chmod +x /init-script.sh && /init-script.sh"]
     networks:
-      - agent_network
-      - traefik_public
+      agent_network:
+        aliases:
+          - odoo_${CLIENT_NAME}
+      traefik_public:
+        aliases:
+          - odoo_${CLIENT_NAME}
     deploy:
       labels:
         - "traefik.enable=true"
-        - "traefik.http.routers.odoo.rule=Host(`${WEB_HOST}`)"
-        - "traefik.http.routers.odoo.entrypoints=websecure"
-        - "traefik.http.routers.odoo.tls.certresolver=le"
-        - "traefik.http.services.odoo.loadbalancer.server.port=${WEB_PORT}"
+        - "traefik.http.routers.odoo_${CLIENT_NAME}.rule=Host(`${WEB_HOST}`)"
+        - "traefik.http.routers.odoo_${CLIENT_NAME}.entrypoints=websecure"
+        - "traefik.http.routers.odoo_${CLIENT_NAME}.tls.certresolver=le"
+        - "traefik.http.services.odoo_${CLIENT_NAME}.loadbalancer.server.port=${WEB_PORT}"
 
 networks:
   traefik_public:
