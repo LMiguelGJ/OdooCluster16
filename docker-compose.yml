@@ -19,7 +19,7 @@ services:
   odoo:
     image: odoo:16.0-20250311
     depends_on:
-      - db
+      - ${DB_HOST}
     environment:
       DB_HOST: ${DB_HOST}
       DB_NAME: ${DB_NAME}
