@@ -8,14 +8,14 @@ else
     if [ -d "OdooCluster16" ]; then
         echo "El directorio OdooCluster16 ya existe. No se clonará el repositorio."
     else
-        # Clonar la rama 16.0 del repositorio Odoo-Enterprise
+        # Clonar el repositorio desde la URL especificada en WEB_GITHUB
         command -v git &>/dev/null || { 
             echo "Git no está instalado. Instalando git..."; 
             apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y git; 
         }
         
-        echo "Clonando el repositorio Odoo-Enterprise..."
-        git clone https://github.com/LMiguelGJ/OdooCluster16.git
+        echo "Clonando el repositorio desde $WEB_GITHUB..."
+        git clone "$WEB_GITHUB" OdooCluster16
         
         echo "Moviendo los addons a /mnt/enterprise-addons/..."
         cd OdooCluster16
