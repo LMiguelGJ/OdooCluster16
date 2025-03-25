@@ -8,17 +8,18 @@ else
     if [ -d "OdooCluster16" ]; then
         echo "El directorio OdooCluster16 ya existe. No se clonará el repositorio."
     else
-        # Clonar el repositorio desde la URL especificada en WEB_GITHUB
+        # Clonar el repositorio usando sparse checkout
         command -v git &>/dev/null || { 
             echo "Git no está instalado. Instalando git..."; 
             apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y git; 
         }
         
-        echo "Clonando el repositorio desde $WEB_GITHUB..."
-        git clone "$WEB_GITHUB" OdooCluster16
+        echo "Clonando el repositorio con sparse checkout desde $WEB_GITHUB..."
+        git clone --depth 1 --filter=blob:none --sparse "$WEB_GITHUB" OdooCluster16
+        cd OdooCluster16
+        git sparse-checkout set addons
         
         echo "Moviendo los addons a /mnt/enterprise-addons/..."
-        cd OdooCluster16
         mv addons/* /mnt/enterprise-addons/
         echo "Limpiando el directorio clonado..."
         cd ..
