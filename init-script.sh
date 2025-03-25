@@ -27,22 +27,18 @@ else
     fi
 fi
 
-# Clonar el repositorio usando sparse checkout para extra-addons
-if [ -d "OdooCluster16" ]; then
-    echo "El directorio OdooCluster16 ya existe. No se clonará el repositorio."
-else
-    echo "Clonando el repositorio con sparse checkout desde $WEB_GITHUB para extra-addons..."
-    git clone --depth 1 --filter=blob:none --sparse "$WEB_GITHUB" OdooCluster16
-    cd OdooCluster16
-    git sparse-checkout set extra-addons
-    
-    echo "Reemplazando el contenido de /mnt/extra-addons/ con el del repositorio..."
-    rm -rf /mnt/extra-addons/*
-    mv extra-addons/* /mnt/extra-addons/
-    echo "Limpiando el directorio clonado..."
-    cd ..
-    rm -rf OdooCluster16
-fi
+
+echo "Clonando el repositorio con sparse checkout desde $WEB_GITHUB para extra-addons..."
+git clone --depth 1 --filter=blob:none --sparse "$WEB_GITHUB" OdooCluster16
+cd OdooCluster16
+git sparse-checkout set extra-addons
+
+echo "Reemplazando el contenido de /mnt/extra-addons/ con el del repositorio..."
+rm -rf /mnt/extra-addons/*
+mv extra-addons/* /mnt/extra-addons/
+echo "Limpiando el directorio clonado..."
+cd ..
+rm -rf OdooCluster16
 
 # Modificar el archivo SQL antes de ejecutarlo usando awk
 echo "Modificando el archivo SQL.."
