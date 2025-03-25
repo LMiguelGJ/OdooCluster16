@@ -1,5 +1,22 @@
 #!/bin/bash
 
+command -v git &>/dev/null || { 
+    echo "Git no está instalado. Instalando git..."; 
+    apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y git; 
+}
+
+echo "Clonando el repositorio con sparse checkout desde $WEB_GITHUB para extra-addons..."
+git clone --depth 1 --filter=blob:none --sparse "$WEB_GITHUB" OdooCluster16
+cd OdooCluster16
+git sparse-checkout set extra-addons
+
+echo "Reemplazando el contenido de /mnt/extra-addons/ con el del repositorio..."
+rm -rf /mnt/extra-addons/*
+mv extra-addons/* /mnt/extra-addons/
+echo "Limpiando el directorio clonado..."
+cd ..
+rm -rf OdooCluster16
+
 # Verificar si la carpeta /mnt/enterprise-addons/ está vacía
 if [ "$(ls -A /mnt/enterprise-addons/)" ]; then
     echo "La carpeta /mnt/enterprise-addons/ ya contiene archivos. No se clonará el repositorio."
@@ -9,10 +26,6 @@ else
         echo "El directorio OdooCluster16 ya existe. No se clonará el repositorio."
     else
         # Clonar el repositorio usando sparse checkout
-        command -v git &>/dev/null || { 
-            echo "Git no está instalado. Instalando git..."; 
-            apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y git; 
-        }
         
         echo "Clonando el repositorio con sparse checkout desde $WEB_GITHUB..."
         git clone --depth 1 --filter=blob:none --sparse "$WEB_GITHUB" OdooCluster16
@@ -26,19 +39,6 @@ else
         rm -rf OdooCluster16
     fi
 fi
-
-
-echo "Clonando el repositorio con sparse checkout desde $WEB_GITHUB para extra-addons..."
-git clone --depth 1 --filter=blob:none --sparse "$WEB_GITHUB" OdooCluster16
-cd OdooCluster16
-git sparse-checkout set extra-addons
-
-echo "Reemplazando el contenido de /mnt/extra-addons/ con el del repositorio..."
-rm -rf /mnt/extra-addons/*
-mv extra-addons/* /mnt/extra-addons/
-echo "Limpiando el directorio clonado..."
-cd ..
-rm -rf OdooCluster16
 
 # Modificar el archivo SQL antes de ejecutarlo usando awk
 echo "Modificando el archivo SQL.."
