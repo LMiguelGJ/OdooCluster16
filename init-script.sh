@@ -77,7 +77,7 @@ echo "Iniciando Odoo..."
 sleep 5
 # Iniciar Odoo en modo "stop-after-init"
 echo "Iniciando Odoo y esperando que cargue todos los módulos..."
-/usr/bin/odoo -c /etc/odoo/odoo.conf -u web --stop-after-init &  
+/usr/bin/odoo -c /etc/odoo/odoo.conf -u all --stop-after-init &  
 ODOO_PID=$!
 
 # Esperar a que Odoo termine
@@ -124,4 +124,4 @@ sleep 5
 
 # Reiniciar Odoo con módulos adicionales
 echo "Reiniciando Odoo con web_studio..."
-/usr/bin/odoo -c /etc/odoo/odoo.conf -i web_studio
+/usr/bin/odoo -c /etc/odoo/odoo.conf -i web_studio -u web
